@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/src/css_parser.dart';
 import 'package:flutter_html/style.dart';
 import 'package:html/dom.dart' as dom;
-//TODO(Sub6Resources): don't use the internal code of the html package as it may change unexpectedly.
 import 'package:html/src/query_selector.dart';
 
 /// A [StyledElement] applies a style to all of its children.
@@ -98,7 +97,6 @@ StyledElement parseStyledElement(
       );
       break;
     case "blockquote":
-      //TODO(Sub6Resources) this is a workaround for collapsing margins. Remove.
       if (element.parent!.localName == "blockquote") {
         styledElement.style = Style(
           margin: const EdgeInsets.only(left: 40.0, right: 40.0, bottom: 14.0),
@@ -296,7 +294,6 @@ StyledElement parseStyledElement(
       break;
     case "ol":
     case "ul":
-      //TODO(Sub6Resources): This is a workaround for collapsed margins. Remove.
       if (element.parent!.localName == "li") {
         styledElement.style = Style(
 //          margin: EdgeInsets.only(left: 30.0),

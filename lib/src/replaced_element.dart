@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:chewie/chewie.dart';
 import 'package:chewie_audio/chewie_audio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_html/html_parser.dart';
 import 'package:flutter_html/src/anchor.dart';
 import 'package:flutter_html/src/html_elements.dart';
@@ -406,7 +405,7 @@ ReplacedElement parseReplacedElement(
     case "iframe":
       return IframeContentElement(
           name: "iframe",
-          src: element.attributes['src'],
+          src: element.attributes['src']!,
           width: double.tryParse(element.attributes['width'] ?? ""),
           height: double.tryParse(element.attributes['height'] ?? ""),
           navigationDelegate: navigationDelegateForIframe,

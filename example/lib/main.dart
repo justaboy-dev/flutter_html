@@ -124,7 +124,7 @@ const htmlData = r"""
       <h3>Network png</h3>
       <img alt='Google' src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' />
       <h3>Network svg</h3>
-      <img src='https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg' />
+      <img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' />
       <h3>Local asset png</h3>
       <img src='asset:assets/html5.png' width='100' />
       <h3>Local asset svg</h3>
@@ -324,6 +324,7 @@ class _MyHomePageState extends State<MyHomePage> {
             messages.forEach((element) {
               print(element);
             });
+            return null;
           },
         ),
       ),

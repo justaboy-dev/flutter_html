@@ -127,7 +127,6 @@ class Style {
   ///
   /// Inherited: no,
   /// Default: 1.0 (specified by font size)
-  // TODO(Sub6Resources): Possibly base this more closely on the CSS attribute.
   double? textDecorationThickness;
 
   /// CSS attribute "`text-shadow`"
@@ -170,7 +169,6 @@ class Style {
   /// Default: Unspecified (null),
   LineHeight? lineHeight;
 
-  //TODO modify these to match CSS styles
   String? before;
   String? after;
   Border? border;
@@ -271,8 +269,6 @@ class Style {
       shadows: textShadow,
       wordSpacing: wordSpacing,
       height: lineHeight?.size ?? 1.0,
-      //TODO background
-      //TODO textBaseline
     );
   }
 
@@ -298,9 +294,7 @@ class Style {
       listStyleType: other.listStyleType,
       listStylePosition: other.listStylePosition,
       padding: other.padding,
-      //TODO merge EdgeInsets
       margin: other.margin,
-      //TODO merge EdgeInsets
       textAlign: other.textAlign,
       textDecoration: other.textDecoration,
       textDecorationColor: other.textDecorationColor,
@@ -315,7 +309,6 @@ class Style {
       before: other.before,
       after: other.after,
       border: other.border,
-      //TODO merge border
       alignment: other.alignment,
       markerContent: other.markerContent,
       maxLines: other.maxLines,
@@ -486,8 +479,6 @@ class FontSize {
   }
   // These values are calculated based off of the default (`medium`)
   // being 14px.
-  //
-  // TODO(Sub6Resources): This seems to override Flutter's accessibility text scaling.
   //
   // Negative values are computed during parsing to be a percentage of
   // the parent style's font size.
